@@ -1,0 +1,30 @@
+# Node dependencies
+client/node_modules
+server/node_modules
+
+# Nuxt dev/build outputs
+client/.output
+client/.data
+client/.nuxt
+client/.nitro
+client/.cache
+client/dist
+
+# Logs
+client/logs
+client/*.log
+
+# Misc
+client/.DS_Store
+client/.fleet
+client/.idea
+# Local dev file
+start.bat
+
+# Local env files
+client/.env
+client/.env.*
+client/!.env.example
+
+# Things I don't want you to see how it works
+client/server/

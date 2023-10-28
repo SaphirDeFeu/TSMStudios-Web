@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+}
