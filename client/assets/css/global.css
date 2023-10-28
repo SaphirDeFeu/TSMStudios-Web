@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color: #FFFFFF;
+    --primary: #333333;
+    --secondary: #666666;
+    --ternary: #111111;
+}
+
+.invert-text-color {
+    color: #000000;
+}
+
+body {
+    background-color: var(--primary);
+    display: flex;
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.bg-ternary {
+    background-color: var(--ternary);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary: #CCCCCC;
+        --secondary: #999999;
+        --ternary: #EEEEEE;
+        color: #000000;
+    }
+
+    .invert-text-color {
+        color: #FFFFFF;
+    }
+}
