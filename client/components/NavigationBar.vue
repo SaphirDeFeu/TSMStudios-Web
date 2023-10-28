@@ -1,13 +1,13 @@
 <template>
     <div class="flex h-full">
-        <div :class="navbarClasses" id="navbar">
-            <!--when "is active" is true, change the navbar-inactive class to navbar-active-->
-            <div>
-                <p>test, account</p>
-                <p> aaa</p>
+        <div :class="navbarClasses" style="width: 5.6em">
+            <div class="flex flex-col items-center ">
+                <div class="nav-element">
+                    <nuxt-link to="/">test</nuxt-link>
+                </div>
             </div>
         </div>
-        <div :class="anchorClasses" id="anchor">
+        <div :class="anchorClasses">
             <button @click="navbaraction">
                 <svg width="20" height="20" viewBox="0 0 100 100" fill="none" class="anim__ease"
                     :style="{ transform: isActive ? 'rotate(-180deg)' : 'rotate(0deg)' }">
@@ -33,8 +33,6 @@ export default {
     computed: {
         navbarClasses() {
             return {
-                'flex': true,
-                'flex-col': true,
                 'fixed': true,
                 'h-full': true,
                 'shadow-lg': true,
@@ -53,7 +51,7 @@ export default {
                 'anchor-inactive': !this.isActive,
                 'anchor-active': this.isActive,
             }
-        }
+        },
     },
     methods: {
         navbaraction() {

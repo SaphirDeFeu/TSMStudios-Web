@@ -25,6 +25,9 @@ start.bat
 client/.env
 client/.env.*
 client/!.env.example
+server/.env
+server/.env.*
+server/!.env.example
 
 # Things I don't want you to see how it works
 client/server/
