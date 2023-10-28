@@ -5,5 +5,20 @@
 body {
     background-color: $primary;
     display: flex;
-    flex-direction: column;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-secondary {
+    background-color: $secondary;
+}
+
+.bg-ternary {
+    background-color: $ternary;
+}
+
+.bg-secondary-dark {
+    background-color: darken($secondary, 10%);
 }

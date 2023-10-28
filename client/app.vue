@@ -1,22 +1,18 @@
 <template>
-  <div>
-    <div class="justify-center align-center">
-      <AppHeader></AppHeader>
-    </div>
-    <NuxtPage></NuxtPage>
-    <AppFooter></AppFooter>
-  </div>
+  <NavigationBar></NavigationBar>
+  <NuxtPage></NuxtPage>
 </template>
 
 <script setup lang="ts">
 useHead({
   title: 'Home | TSM Studios',
   meta: [
-    { name: 'description', content: 'My amazing site.' }
+    { name: 'description', content: "Tout ce qu'un groupe d'amis a fait en étant bourré (je crois)" }
   ],
   script: [ { innerHTML: '' } ]
 })
 </script>
 
 <style lang="scss">
+
 </style>

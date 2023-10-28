@@ -1,3 +1,26 @@
-div.sec {
-    background-color: $secondary;
+div.fixed {
+    position: fixed;
+}
+
+div.anchor-div {
+    position: fixed;
+    top: 50%;
+    left: 5em;
+    border-radius: 50%;
+
+    &:hover {
+        transform: translateX(8px);
+    }
+}
+
+div.anchor-inactive {
+    left: -0.5em;
+}
+
+div.navbar-inactive {
+    transform: translateX(-100%)
+}
+
+.anim__ease {
+    transition-duration: 500ms;
 }
