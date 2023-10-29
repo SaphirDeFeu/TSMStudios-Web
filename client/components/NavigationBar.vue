@@ -1,5 +1,5 @@
 <template>
-    <div class="flex h-full">
+    <div class="flex h-full" id="__navbar">
         <div :class="navbarClasses" style="width: 11.2em">
             <div class="socials">
                 <button @click="socials('discord')">
