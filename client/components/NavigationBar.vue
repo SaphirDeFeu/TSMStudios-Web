@@ -14,9 +14,9 @@
             </div>
             <div class="flex flex-col items-center invert-text-color">
                 <div class="nav-element"></div>
-                <nuxt-link to="/" class="nav-element">Accueil</nuxt-link>
-                <nuxt-link to="/projects" class="nav-element">Projets</nuxt-link>
-                <nuxt-link to="/about" class="nav-element">Info</nuxt-link>
+                <NavItem to="/">Accueil</NavItem>
+                <NavItem to="/projects">Projets</NavItem>
+                <NavItem to="/about">Info</NavItem>
             </div>
         </div>
         <div :class="anchorClasses">
@@ -89,5 +89,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '~/assets/css/components/appheader.css';
+@import '~/assets/css/components/navbar.css';
 </style>

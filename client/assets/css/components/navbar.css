@@ -25,25 +25,6 @@ div.navbar-inactive {
     transition-duration: 500ms;
 }
 
-.nav-element {
-    text-align: center;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    border-bottom: solid 1px #AAAAAA;
-
-    transition-duration: 500ms;
-}
-
-.nav-element:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 1.4rem;
-}
-
 .socials {
     display: flex;
     justify-content: flex-end;
@@ -71,4 +52,18 @@ div.navbar-inactive {
 
 .cover-inactive {
     background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-element {
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-bottom: solid 1px #AAAAAA;
+
+    transition-duration: 500ms;
 }
