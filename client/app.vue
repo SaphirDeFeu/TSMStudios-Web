@@ -13,7 +13,11 @@ useHead({
     { name: 'description', content: "Tout ce qu'un groupe d'amis a fait en étant bourré (je crois)" }
   ],
   script: [{ innerHTML: '' }]
-})
+});
+
+const { data } = await useFetch('/api/key');
+const key = data.value?.data;
+console.log(`Retrieved public encryption key from server`);
 </script>
 
 <style lang="scss">
