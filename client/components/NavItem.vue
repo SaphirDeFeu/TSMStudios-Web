@@ -1,10 +1,10 @@
 <template>
+    <div class="flex flex-col justify-center parent">
         <nuxt-link :to="props.to" class="nav-element">
             <slot></slot>
         </nuxt-link>
-        <!--<div>
-
-        </div>-->
+        <div class="nav-border"></div>
+    </div>
 </template>
 
 <script setup lang="ts">
