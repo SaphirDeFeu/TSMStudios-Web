@@ -29,15 +29,13 @@ div.navbar-inactive {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }
 
 .social {
     padding-right: 0.25rem;
-    transition-duration: 500ms;
-}
-
-.social:hover {
-    transform: rotate(360deg);
 }
 
 .cover {
@@ -66,4 +64,24 @@ div.navbar-inactive {
     border-bottom: solid 1px #AAAAAA;
 
     transition-duration: 500ms;
+}
+
+.account-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    transition-duration: 500ms;
+}
+
+.account-info {
+    transition-duration: 500ms;
+}
+
+.account-info:hover {
+    text-decoration: underline;
 }

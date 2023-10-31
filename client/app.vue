@@ -1,12 +1,23 @@
 <template>
+  <Footer></Footer>
   <NavigationBar></NavigationBar>
   <div class="shadow-lg" id="__content">
     <NuxtPage></NuxtPage>
   </div>
-  <Footer></Footer>
+  <div>
+    Counter: {{ counter }}
+    <button @click="counter = '+'">
+      +
+    </button>
+    <button @click="counter = '-'">
+      -
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
+const counter = useAccountUsername();
+
 useHead({
   title: 'Home | TSM Studios',
   meta: [

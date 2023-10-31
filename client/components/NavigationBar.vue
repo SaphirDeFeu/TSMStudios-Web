@@ -1,5 +1,5 @@
 <template>
-    <div class="flex h-full" id="__navbar">
+    <div class="flex h-full invert-text-color" id="__navbar">
         <div :class="navbarClasses" style="width: 11.2em">
             <div class="socials">
                 <button @click="socials('discord')">
@@ -9,10 +9,20 @@
                     </svg>
                 </button>
             </div>
-            <div class="account-card">
+            <div>
+                <nuxt-link to="/dashboard" class="account-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 1024 1024">
+                        <clipPath id="circle-clip">
+                            <circle cx="512" cy="512" r="512" fill="#000000" />
+                        </clipPath>
 
+                        <image x="0" y="0" width="1024" height="1024" xlink:href="~/assets/img/default-user.jpg"
+                            clip-path="url(#circle-clip)" />
+                    </svg>
+                    <p class="account-info">{{ useAccountUsername() }}</p>
+                </nuxt-link>
             </div>
-            <div class="flex flex-col items-center invert-text-color">
+            <div class="flex flex-col items-center">
                 <div class="nav-element"></div>
                 <NavItem to="/">Accueil</NavItem>
                 <NavItem to="/projects">Projets</NavItem>
@@ -78,7 +88,7 @@ export default {
             this.isActive = !this.isActive;
         },
         socials(type: string) {
-            switch(type) {
+            switch (type) {
                 case "discord":
                     window.open("https://discord.com/invite/7CpDun29Ms", '_blank');
                     break;
