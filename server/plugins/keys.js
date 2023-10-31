@@ -1,4 +1,5 @@
 const { generateKeyPairSync } = require('crypto');
+const Logger = require('./Logger');
 
 const { privateKey, publicKey } = generateKeyPairSync('rsa', {
     modulusLength: 2048,
@@ -13,7 +14,9 @@ const { privateKey, publicKey } = generateKeyPairSync('rsa', {
     },
 });
 
-console.log(`${"INFO".bgGreen}  Generated encryption keys`);
+const logger = new Logger();
+
+logger.output(`[${new Date().toISOString()}] ${"INFO".bgGreen}  Generated encryption keys`);
 
 module.exports = {
     publicKey,

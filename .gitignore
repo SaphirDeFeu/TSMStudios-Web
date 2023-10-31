@@ -18,6 +18,7 @@ client/*.log
 client/.DS_Store
 client/.fleet
 client/.idea
+server/logs
 # Local dev file
 start.bat
 
