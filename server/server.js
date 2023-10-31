@@ -30,11 +30,11 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/api/', (req, res) => {
-    res.status(200).send(`Ping successful. Server API is up and running.`);
+app.get('/server/', (req, res) => {
+    res.status(200).send(`Ping successful. Server is up and running.`);
 });
 
-app.get('/api/key', (req, res) => {
+app.get('/server/key', (req, res) => {
     res.status(200).send({ key: publicKey });
 })
 
