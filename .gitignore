@@ -10,15 +10,18 @@ client/.nitro
 client/.cache
 client/dist
 
+# General dev/build outputs
+server/out
+
 # Logs
 client/logs
 client/*.log
+server/logs
 
 # Misc
 client/.DS_Store
 client/.fleet
 client/.idea
-server/logs
 # Local dev file
 start.bat
 

@@ -1,12 +1,17 @@
-const fs = require('fs');
-const util = require('util');
-const path = require('path');
+import * as path from "path";
+import * as util from 'util';
+import * as fs from 'fs';
 
-console.log(path.join(__dirname, '../logs'));
+console.log(path.join(__dirname, '../../logs'));
 
-class Logger {
+export default class Logger {
+  logQueue: string[];
+  logsDirectory: string;
+  logFileName: string;
+  isLogging: boolean;
+
   constructor() {
-    this.logsDirectory = path.join(__dirname, '../logs');
+    this.logsDirectory = path.join(__dirname, '../../logs');
     this.logFileName = '';
 
     this.logQueue = [];
@@ -15,7 +20,7 @@ class Logger {
     this.writeLog = util.promisify(this.writeLog);
   }
 
-  async writeLog(log) {
+  async writeLog(log: string): Promise<void> {
     if (this.isLogging) {
       this.logQueue.push(log);
       return;
@@ -34,6 +39,9 @@ class Logger {
 
       if (this.logQueue.length > 0) {
         const nextLog = this.logQueue.shift();
+        if(!nextLog) {
+          return;
+        }
         this.writeLog(nextLog);
       }
     } finally {
@@ -41,7 +49,7 @@ class Logger {
     }
   }
 
-  output(log) {
+  output(log: string): void {
     console.log(log);
     const regex = /\[[0-9]+m/g; 
     const cleanLog = log.replace(regex, '');
@@ -49,5 +57,3 @@ class Logger {
     return;
   }
 }
-
-module.exports = Logger;
